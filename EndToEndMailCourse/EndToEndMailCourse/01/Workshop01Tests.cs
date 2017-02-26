@@ -8,6 +8,7 @@ namespace EndToEndMailCourse._01
     public class Workshop01Tests
     {
         private string testUrl = "https://suvroc.github.io/selenium-mail-course/01/workshop.html";
+        private const string valueAttribute = "value";
 
         [Test]
         public void ShouldTestFirstName()
@@ -18,7 +19,8 @@ namespace EndToEndMailCourse._01
             IWebElement element = null;
 
             #region TEST CODE
-
+            element = driver.FindElement(By.Name("firstName"));
+            value = element.GetAttribute(valueAttribute);
             #endregion
 
             Assert.IsNotNull(element);
@@ -37,7 +39,8 @@ namespace EndToEndMailCourse._01
             IWebElement element = null;
 
             #region TEST CODE
-
+            element = driver.FindElement(By.Name("lastName"));
+            value = element.GetAttribute(valueAttribute);
             #endregion
 
             Assert.IsNotNull(element);
@@ -56,7 +59,8 @@ namespace EndToEndMailCourse._01
             IWebElement element = null;
 
             #region TEST CODE
-
+            element = driver.FindElement(By.Name("country"));
+            value = element.GetAttribute(valueAttribute);
             #endregion
 
             Assert.IsNotNull(element);
@@ -75,7 +79,8 @@ namespace EndToEndMailCourse._01
             IWebElement element = null;
 
             #region TEST CODE
-
+            element = driver.FindElement(By.Id("isActive"));
+            value = element.Selected;
             #endregion
 
             Assert.IsNotNull(element);
@@ -95,7 +100,8 @@ namespace EndToEndMailCourse._01
             IWebElement element = null;
 
             #region TEST CODE
-
+            element = driver.FindElement(By.Id("commentInput"));
+            value = element.GetAttribute(valueAttribute);
             #endregion
 
             Assert.IsNotNull(element);
@@ -113,7 +119,7 @@ namespace EndToEndMailCourse._01
             IWebElement element = null;
 
             #region TEST CODE
-
+            element = driver.FindElement(By.LinkText("Details"));
             #endregion
 
             Assert.IsNotNull(element);
@@ -132,7 +138,7 @@ namespace EndToEndMailCourse._01
             IWebElement element = null;
 
             #region TEST CODE
-
+            element = driver.FindElement(By.PartialLinkText("books"));
             #endregion
 
             Assert.IsNotNull(element);
